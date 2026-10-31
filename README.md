@@ -17,6 +17,14 @@ Browser-based floor planning, site design, heating and lighting analysis, and re
 
 All earlier features and saved projects continue to work.
 
+## Mobile layout
+
+`mobile.html` is a touch-friendly version of the editor with a full-screen canvas, a bottom tab bar (Select, Pan, Tools, Properties, More), slide-up panels, and two-finger pinch to zoom and move the plan. Phones that open `index.html` are sent to `mobile.html` automatically. Use **More → Use desktop layout** on a phone, or **File → Switch to mobile layout** on a computer, to choose a layout yourself; the choice is remembered. Both layouts share the same saved projects.
+
+## Properties panel
+
+Minimise the properties panel with the arrow beside its title, **View → Properties panel**, or **Ctrl+.**. A slim rail stays on the right; a dot appears on it when something is selected.
+
 ## Links
 
 Sections can be linked directly: `#home`, `#projects`, `#start`, `#about`, and `#editor` to go straight to the editor.
@@ -28,7 +36,7 @@ Open `index.html` in a modern desktop browser. No build or installation is neede
 ## Publish with GitHub Pages
 
 1. Create a GitHub repository, or open your existing one.
-2. Upload the **contents** of this package (`index.html`, `README.md`, `.nojekyll`) to the repository root. Do not upload the ZIP itself.
+2. Upload the **contents** of this package (`index.html`, `mobile.html`, `README.md`, `.nojekyll`) to the repository root. Do not upload the ZIP itself.
 3. Commit to your default branch (usually `main`).
 4. Go to **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select your default branch and **/(root)**, then save.
 5. Visit the URL shown under **Settings → Pages** once it has deployed.
