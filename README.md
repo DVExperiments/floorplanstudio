@@ -17,6 +17,15 @@ Browser-based floor planning, site design, heating and lighting analysis, and re
 
 All earlier features and saved projects continue to work.
 
+## Install as an app
+
+On a phone, the home page has a **Download app** button (also in **More → Download app**). It installs Floorplan Studio to the home screen with its own icon. Opened from that icon, it runs full screen without browser bars and works offline.
+
+- **Android (Chrome, Edge, Samsung Internet):** tapping the button shows the browser's install prompt. If it doesn't appear, the button explains how to use the browser menu instead.
+- **iPhone and iPad:** Apple doesn't let websites start an install, so the button shows the two steps: **Share**, then **Add to Home Screen**. On iOS, the home-screen app keeps its own designs, separate from Safari; move designs across with Download JSON and Import.
+
+Installing only works once the site is published on GitHub Pages (https). After you change the site files, raise the `VERSION` value at the top of `sw.js` so installed copies pick up the update.
+
 ## Mobile layout
 
 `mobile.html` is a touch-friendly version of the editor with a full-screen canvas, a bottom tab bar (Select, Pan, Tools, Properties, More), slide-up panels, and two-finger pinch to zoom and move the plan. Phones that open `index.html` are sent to `mobile.html` automatically. Use **More → Use desktop layout** on a phone, or **File → Switch to mobile layout** on a computer, to choose a layout yourself; the choice is remembered. Both layouts share the same saved projects.
@@ -36,7 +45,7 @@ Open `index.html` in a modern desktop browser. No build or installation is neede
 ## Publish with GitHub Pages
 
 1. Create a GitHub repository, or open your existing one.
-2. Upload the **contents** of this package (`index.html`, `mobile.html`, `README.md`, `.nojekyll`) to the repository root. Do not upload the ZIP itself.
+2. Upload the **contents** of this package to the repository root: `index.html`, `mobile.html`, `manifest.webmanifest`, `sw.js`, the `icons` folder, `LICENSE.md`, `README.md` and `.nojekyll`. Do not upload the ZIP itself.
 3. Commit to your default branch (usually `main`).
 4. Go to **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select your default branch and **/(root)**, then save.
 5. Visit the URL shown under **Settings → Pages** once it has deployed.
@@ -53,6 +62,10 @@ The app loads the IBM Plex Sans font from Google Fonts. If that is unavailable, 
 ## Keyboard
 
 Press `?` for the full list. Common shortcuts are `V` select, `R` rectangle room, `P` custom room, `D` door, `W` window, `M` measure, `G` toggle snap, `Ctrl+Z`/`Ctrl+Y` undo/redo, `Ctrl+S` save, `Ctrl+O` projects and `Ctrl+P` print layout.
+
+## License
+
+Floorplan Studio is free for personal, educational and other non-commercial use under the Floorplan Studio Non-Commercial License in `LICENSE.md`. Selling it, charging for access, showing ads in it, or building it into a paid product needs written permission. Drawings and renders made with it belong to whoever made them.
 
 ## Important note
 
